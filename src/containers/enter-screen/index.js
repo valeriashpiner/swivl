@@ -9,9 +9,9 @@ export default class EnterScreen extends React.Component {
   static navigationOptions = () => ({
     title: 'GitHub Users',
     headerStyle: {
-    backgroundColor: '#cdcdc0'
+    backgroundColor: '#000000'
     },
-    headerTitleStyle: { color: '#626d71' }
+    headerTitleStyle: { color: '#ffffff' }
   });
   render() {
     const { navigate } = this.props.navigation;
@@ -24,8 +24,8 @@ export default class EnterScreen extends React.Component {
           title="CHECK USERS"
           onPress={() => navigate("listOfUsers", { screen: "listOfUsers" })}
           rounded
-          backgroundColor='#ddbc95'
-          color='#b38867'
+          backgroundColor='#000000'
+          color='#ffffff'
         />
       </View>
     );

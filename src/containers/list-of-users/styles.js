@@ -4,7 +4,8 @@ export default StyleSheet.create({
   container: {
     flexDirection: 'column',
     backgroundColor: '#ffffff',
-    flex: 1
+    flex: 1,
+    padding: 10,
   },
   row: {
     flexDirection: 'row',

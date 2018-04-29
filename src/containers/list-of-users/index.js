@@ -1,15 +1,24 @@
 import React from 'react';
-import { View, FlatList, Button } from 'react-native';
+import { View, FlatList } from 'react-native';
 import axios from 'axios';
+import { Button } from "react-native-elements";
 
 import UserItem from '../../components/user-item';
 import styles from './styles';
 
 export default class UserList extends React.Component {
+  static navigationOptions = () => ({
+    title: 'GitHub Users',
+    headerStyle: {
+    backgroundColor: '#000000'
+    },
+    headerTitleStyle: { color: '#ffffff' }
+  });
+  
   state = {
     users: [],
     since: 1,
-    perPage: 1,
+    perPage: 5,
     isRefreshing: false,
     isLoading: false,
   };
@@ -36,11 +45,10 @@ export default class UserList extends React.Component {
       });
   };
 
-  handleRefresh = () => {
+  handleLoadMore = () => {
     this.setState(
       {
-        since: this.state.since + 1,
-        isRefreshing: true,
+        perPage: this.state.perPage + 5,
       },
       () => {
         this.loadUsers();
@@ -48,33 +56,37 @@ export default class UserList extends React.Component {
     );
   };
 
-  handleLoadMore = () => {
+  handleStopLoad = () => {
     this.setState(
       {
-        perPage: this.state.perPage + 1,
-      },
-      () => {
-        this.loadUsers();
-      },
+        perPage: 100,
+      }
     );
   };
 
   render() {
-    const { users, isRefreshing } = this.state;
-
+    const { users, isRefreshing, perPage } = this.state;
+    const { navigation } = this.props;
     return (
       <View style={styles.container}>
         {users && (
           <FlatList
             data={users}
-            renderItem={({ item }) => <UserItem item={item} />}
-            keyExtractor={item => item.id}
+            renderItem={({ item }) => <UserItem item={item} navigation={this.props.navigation}  />}
+            keyExtractor={item => item.id.toString()}
             refreshing={isRefreshing}
-            onRefresh={this.handleRefresh}
             onEndThreshold={0}
           />
         )}
-        <Button title="Load" onPress={this.handleLoadMore} />
+        <Button
+          raised
+          title="Load more"
+          rounded
+          icon={{name: 'github', type: 'font-awesome'}}
+          backgroundColor='#000000'
+          color='#ffffff'
+          onPress={perPage <= 95 ? this.handleLoadMore : this.handleStopLoad}
+        />
       </View>
     );
   }
