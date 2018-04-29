@@ -1,0 +1,68 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier",
+      "airbnb"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "rules": {
+      "prefer-destructuring": ["error", {
+        "array": false,
+        "object": false
+      }, {
+        "enforceForRenamedProperties": false
+      }],
+      "indent": [2, 2],
+      "complexity": ["error", 20],
+      "no-eq-null": "error",
+      "newline-after-var": ["error", "always"],
+      "newline-before-return": "error",
+      "no-multiple-empty-lines": ["error", { "max": 1 }],
+      "react/jsx-filename-extension": [2, { "extensions": [".js"] }],
+      "react/forbid-prop-types": 0,
+      "no-nested-ternary": 0,
+      "no-underscore-dangle": 0,
+      "no-unsafe-finally": 0,
+      "new-cap": 0,
+      "no-param-reassign": 0,
+      "no-confusing-arrow": 0,
+      "no-bitwise": ["off"],
+      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+      "no-unused-expressions": 0,
+      "no-cond-assign": [2, "except-parens"],
+      "no-useless-constructor": 0,
+      "global-require": 0,
+      "no-extra-parens": [2, "functions"],
+      "react/prefer-stateless-function": 0,
+      "generator-star-spacing": 0,
+      "no-constant-condition": ["error", { "checkLoops": false }],
+      "import/no-named-as-default": 0,
+      "import/no-named-as-default-member": 0,
+      "arrow-body-style": 0,
+      "import/prefer-default-export": 0,
+    "globals": {
+      "require": true,
+      "__DEV__": true,
+      "afterEach": true,
+      "beforeEach": true,
+      "describe": true,
+      "expect": true,
+      "fetch": true,
+      "it": true,
+      "navigator": true,
+      "jest": true
+    }
+}
+}
