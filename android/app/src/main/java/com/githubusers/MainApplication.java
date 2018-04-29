@@ -1,4 +1,4 @@
-package com.swivl;
+package com.githubusers;
 
 import android.app.Application;
 

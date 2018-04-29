@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "swivl-tvOS.app"
-               BlueprintName = "swivl-tvOS"
-               ReferencedContainer = "container:swivl.xcodeproj">
+               BuildableName = "GithubUsers-tvOS.app"
+               BlueprintName = "GithubUsers-tvOS"
+               ReferencedContainer = "container:GithubUsers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "swivl-tvOSTests.xctest"
-               BlueprintName = "swivl-tvOSTests"
-               ReferencedContainer = "container:swivl.xcodeproj">
+               BuildableName = "GithubUsers-tvOSTests.xctest"
+               BlueprintName = "GithubUsers-tvOSTests"
+               ReferencedContainer = "container:GithubUsers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "swivl-tvOSTests.xctest"
-               BlueprintName = "swivl-tvOSTests"
-               ReferencedContainer = "container:swivl.xcodeproj">
+               BuildableName = "GithubUsers-tvOSTests.xctest"
+               BlueprintName = "GithubUsers-tvOSTests"
+               ReferencedContainer = "container:GithubUsers.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "swivl-tvOS.app"
-            BlueprintName = "swivl-tvOS"
-            ReferencedContainer = "container:swivl.xcodeproj">
+            BuildableName = "GithubUsers-tvOS.app"
+            BlueprintName = "GithubUsers-tvOS"
+            ReferencedContainer = "container:GithubUsers.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "swivl-tvOS.app"
-            BlueprintName = "swivl-tvOS"
-            ReferencedContainer = "container:swivl.xcodeproj">
+            BuildableName = "GithubUsers-tvOS.app"
+            BlueprintName = "GithubUsers-tvOS"
+            ReferencedContainer = "container:GithubUsers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "swivl-tvOS.app"
-            BlueprintName = "swivl-tvOS"
-            ReferencedContainer = "container:swivl.xcodeproj">
+            BuildableName = "GithubUsers-tvOS.app"
+            BlueprintName = "GithubUsers-tvOS"
+            ReferencedContainer = "container:GithubUsers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
