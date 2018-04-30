@@ -10,11 +10,11 @@ export default class UserItem extends React.Component {
     const { item, navigation } = this.props;
 
     return (
-      <TouchableOpacity key={item.id} style={styles.row} onPress={() => navigation.navigate("listOfFollowers", { screen: "listOfFollowers" })}>
+      <TouchableOpacity key={item.id} style={styles.row} onPress={() => navigation.navigate("listOfFollowers", { item })}>
         <Image source={{ uri: item.avatar_url }} style={styles.avatar} />
         <View style={styles.container}>
-            <Text style={styles.text}>Login: {item.login}</Text>
-            <Text style={styles.text} numberOfLines={1}>Link: {item.url}</Text>
+            <Text style={styles.textLogin}>{item.login}</Text>
+            <Text style={styles.text} numberOfLines={1}>{item.html_url}</Text>
         </View>    
       </TouchableOpacity>
     );
