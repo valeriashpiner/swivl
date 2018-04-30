@@ -1,8 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { TouchableOpacity, Image, View, Text } from 'react-native';
+import React from "react";
+import PropTypes from "prop-types";
+import { TouchableOpacity, Image, View, Text } from "react-native";
+import { Icon } from 'react-native-elements';
 
-import styles from './styles';
+import styles from "./styles";
 
 export default class UserItem extends React.Component {
   render() {
@@ -12,14 +13,21 @@ export default class UserItem extends React.Component {
       <TouchableOpacity
         key={item.id}
         style={styles.row}
-        onPress={() => navigation.navigate('listOfFollowers', { item })}
+        onPress={() => navigation.navigate("listOfFollowers", { item })}
       >
         <Image source={{ uri: item.avatar_url }} style={styles.avatar} />
         <View style={styles.container}>
           <Text style={styles.textLogin}>{item.login}</Text>
-          <Text style={styles.text} numberOfLines={1}>
-            {item.html_url}
-          </Text>
+          <View style={styles.linkRow}>
+            <Icon
+              name="github-square"
+              type="font-awesome"
+              color="rgba(171, 171, 171, 1)"
+            />
+            <Text style={styles.text} numberOfLines={1}>
+              {item.html_url}
+            </Text>
+          </View>
         </View>
       </TouchableOpacity>
     );
@@ -28,5 +36,5 @@ export default class UserItem extends React.Component {
 
 UserItem.propTypes = {
   item: PropTypes.object.isRequired,
-  navigation: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
 };
