@@ -7,13 +7,6 @@ import { githubLogo } from '../../assets';
 import styles from './styles';
 
 export default class EnterScreen extends React.Component {
-  static navigationOptions = () => ({
-    title: 'GitHub Users',
-    headerStyle: {
-      backgroundColor: '#000000',
-    },
-    headerTitleStyle: { color: '#ffffff' },
-  });
   render() {
     const { navigate } = this.props.navigation;
 

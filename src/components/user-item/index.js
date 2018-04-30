@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TouchableOpacity, Image, View, Text } from "react-native";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TouchableOpacity, Image, View, Text } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-import styles from "./styles";
+import styles from './styles';
 
 export default class UserItem extends React.Component {
   render() {
@@ -13,7 +13,7 @@ export default class UserItem extends React.Component {
       <TouchableOpacity
         key={item.id}
         style={styles.row}
-        onPress={() => navigation.navigate("listOfFollowers", { item })}
+        onPress={() => navigation.navigate('listOfFollowers', { item })}
       >
         <Image source={{ uri: item.avatar_url }} style={styles.avatar} />
         <View style={styles.container}>
@@ -36,5 +36,5 @@ export default class UserItem extends React.Component {
 
 UserItem.propTypes = {
   item: PropTypes.object.isRequired,
-  navigation: PropTypes.object.isRequired
+  navigation: PropTypes.object.isRequired,
 };

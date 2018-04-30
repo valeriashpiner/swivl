@@ -8,14 +8,6 @@ import UserItem from '../../components/user-item';
 import styles from './styles';
 
 export default class UserList extends React.Component {
-  static navigationOptions = () => ({
-    title: 'GitHub Users',
-    headerStyle: {
-      backgroundColor: '#000000',
-    },
-    headerTitleStyle: { color: '#ffffff' },
-  });
-
   state = {
     users: [],
     since: 1,

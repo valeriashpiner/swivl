@@ -8,13 +8,6 @@ import FollowerItem from '../../components/follower-item';
 import styles from '../list-of-users/styles';
 
 export default class FollowerList extends React.Component {
-  static navigationOptions = () => ({
-    title: 'Followers',
-    headerStyle: {
-      backgroundColor: '#000000',
-    },
-    headerTitleStyle: { color: '#ffffff' },
-  });
   constructor(props) {
     super(props);
     this.state = {
