@@ -14,7 +14,6 @@ export default class EnterScreen extends React.Component {
       <View style={styles.container}>
         <Image source={githubLogo} style={styles.logo} />
         <Button
-          raised
           title="CHECK USERS"
           onPress={() => navigate('listOfUsers', { screen: 'listOfUsers' })}
           rounded
