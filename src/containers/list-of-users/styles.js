@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
+
 const { width } = Dimensions.get('window');
 
 export default StyleSheet.create({
@@ -16,10 +17,10 @@ export default StyleSheet.create({
     height: 100,
   },
   button: {
-    width: width,
+    width,
     height: 60,
     position: 'absolute',
     left: -15,
     bottom: 0,
-  }
+  },
 });

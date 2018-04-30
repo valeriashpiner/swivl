@@ -1,6 +1,7 @@
 import React from 'react';
-import { TouchableOpacity, Image, View, Text, FlatList } from 'react-native';
-import { Button } from "react-native-elements";
+import PropTypes from 'prop-types';
+import { View, FlatList } from 'react-native';
+import { Button } from 'react-native-elements';
 import axios from 'axios';
 
 import FollowerItem from '../../components/follower-item';
@@ -10,29 +11,27 @@ export default class FollowerList extends React.Component {
   static navigationOptions = () => ({
     title: 'Followers',
     headerStyle: {
-    backgroundColor: '#000000'
+      backgroundColor: '#000000',
     },
-    headerTitleStyle: { color: '#ffffff' }
+    headerTitleStyle: { color: '#ffffff' },
   });
-
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      item: this.props.navigation.state.params.item,
       followers: [],
-      isLoading: false,
-    }
-    const { followers_url} = this.props.navigation.state.params.item
-    this.item = { followers_url } 
+      perPage: 5,
+    };
+
+    const { followers_url } = this.props.navigation.state.params.item;
+
+    this.item = { followers_url };
   }
   componentDidMount() {
     this.loadUsers();
   }
 
   loadUsers = () => {
-    const { followers, since, perPage  } = this.state;
-
-    this.setState({ isLoading: true });
+    const { since, perPage } = this.state;
 
     axios
       .get(`${this.item.followers_url}?since=${since}&per_page=${perPage}`)
@@ -41,9 +40,7 @@ export default class FollowerList extends React.Component {
           followers: res.data,
         });
       })
-      .catch((err) => {
-        console.error(err);
-      });
+      .catch(() => {});
   };
 
   handleLoadMore = () => {
@@ -59,6 +56,7 @@ export default class FollowerList extends React.Component {
 
   render() {
     const { followers, perPage } = this.state;
+
     return (
       <View style={styles.container}>
         {followers && (
@@ -73,12 +71,16 @@ export default class FollowerList extends React.Component {
           large
           title="Load more"
           containerViewStyle={styles.button}
-          icon={{name: 'github', type: 'font-awesome'}}
-          backgroundColor='#000000'
-          color='#ffffff'
+          icon={{ name: 'github', type: 'font-awesome' }}
+          backgroundColor="#000000"
+          color="#ffffff"
           onPress={perPage <= 95 ? this.handleLoadMore : this.handleStopLoad}
         />
       </View>
     );
   }
 }
+
+FollowerList.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};

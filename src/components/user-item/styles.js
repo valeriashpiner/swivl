@@ -23,5 +23,5 @@ export default StyleSheet.create({
   text: {
     width: 250,
     color: 'rgba(171, 171, 171, 1)',
-  }
+  },
 });

@@ -52,6 +52,7 @@
       "import/no-named-as-default-member": 0,
       "arrow-body-style": 0,
       "import/prefer-default-export": 0,
+      "camelcase": [2, {"properties": "never"}],
     "globals": {
       "require": true,
       "__DEV__": true,
