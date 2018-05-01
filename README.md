@@ -8,7 +8,7 @@
 
 `for ios`
 
-:three: Run XCode. Find file `GithubUsers.xcodeproj` and open this project with XCode. Select device. Buld project and run it by `yarn start`.
+:three: Run XCode. Find file `GithubUsers.xcodeproj` and open this project with XCode. Select device. Buld project and run it or run it by `yarn start`.
 
 `for android`
 
