@@ -23,7 +23,7 @@ export default class FollowerItem extends React.Component {
               type="font-awesome"
               color="rgba(171, 171, 171, 1)"
             />
-            <Text style={styles.text}>Got to profile</Text>
+            <Text style={styles.text}>Go to profile</Text>
           </TouchableOpacity>
         </View>
       </View>
